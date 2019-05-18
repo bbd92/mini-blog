@@ -1,0 +1,15 @@
+.content
+  .content__header
+    %li.content__header__title
+      = blog.title
+    %li.content__header__name |
+      = blog.user.name
+    %li.content__header__date
+      = blog.created_at
+    - if user_signed_in? && current_user.id == blog.user_id
+      %li.content__header__edit
+        = link_to edit_blog_path(blog.id) do
+          = fa_icon 'edit lg', class: "icon"
+ 
+  .content__text 
+    = simple_format(blog.text)

@@ -1,0 +1,18 @@
+=render "blogs/header"
+.contents
+  %h2 Sign up
+  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .field
+      = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ユーザーネーム", class: "form"
+    .field
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form"
+    .field
+      - if @minimum_password_length
+        %em
+          - attention = "(#{@minimum_password_length}文字以上)"
+      = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード#{attention}", class: "form"
+    .field
+      = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード再入力", class: "form"
+    .actions
+      = f.submit "Sign up", class: "sign-up-button"

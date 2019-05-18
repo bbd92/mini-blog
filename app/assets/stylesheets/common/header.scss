@@ -1,0 +1,40 @@
+.header{
+  height: 230px;
+  border-style: solid none;
+  border-width: 30px;
+  border-color: $main-color;
+  color: $main-color;
+  &__site-title{
+    text-align: center;
+    line-height: 230px;
+    margin: 0 auto;
+    font-size: 60px;
+    font-weight: 900;
+  }
+  &__btns{
+    height: 30px;
+    width: 400px;
+    margin: auto auto 0 auto;
+    &__left-btn{
+      width: 50%;
+      float: left;
+      text-align: center;
+      line-height: 30px;
+      color: $sub-color;
+      &__text{
+        color: $sub-color;
+      }
+    }
+    &__right-btn{
+      width: 50%;
+      float: right;
+      text-align: center;
+      line-height: 30px;
+      color: $sub-color;
+      &__text{
+        color: $sub-color;
+      }
+    }
+  }
+}
+

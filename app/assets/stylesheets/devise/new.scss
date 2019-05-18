@@ -1,0 +1,26 @@
+h2{
+  color: $main-color;
+  text-align: center;
+}
+.sign-up-text{
+  color: $main-color;
+}
+.form{
+  margin: 20px 300px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+.sign-up-button{
+  margin: 20px 300px;
+  width: 225px;
+  color: $sub-color;
+  background-color: $main-color;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.center{
+  width: 200px;
+  margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+=render "header"
+.contents
+  .content
+    =form_for @blog do |f|
+      .content__header
+        =f.text_field :title, placeholder: "タイトルを入力してください", class: "new-title"
+        =f.submit "Send", class: "send-button"
+      .content__text
+        =f.text_area :text, placeholder: "内容を入力してください",maxlength: "200", class: "new-text"

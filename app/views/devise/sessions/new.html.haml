@@ -1,0 +1,18 @@
+=render "blogs/header"
+.contents
+  %h2 Log in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form"
+    .field
+      = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "form"
+      .field
+    .center
+      - if devise_mapping.rememberable?
+        .field
+          = f.check_box :remember_me
+          = f.label :remember_me, class: "sign-up-text"
+    .actions
+      = f.submit "Log in", class: "sign-up-button"
+    .center
+      = render "devise/shared/links"

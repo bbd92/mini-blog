@@ -1,0 +1,30 @@
+.new-title{
+  margin: 5px 0;
+  width: 300px;
+  float: left;
+}
+.send-button{
+  margin: 5px;
+  float: right;
+  color: $sub-color;
+  background-color: $main-color;
+  border-radius: 5px;
+}
+.delete-button{
+  margin: 5px;
+  float: right;
+  color: $sub-color;
+  background-color: $main-color;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: $sub-color;
+  border-width: 0.5px;
+  line-height: 18px;
+  width: 40px;
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+}
+.new-text{
+  width: 500px;
+}

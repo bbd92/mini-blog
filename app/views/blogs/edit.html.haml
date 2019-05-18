@@ -1,0 +1,10 @@
+=render "header"
+.contents
+  .content
+    =form_for @blog do |f|
+      .content__header
+        =f.text_field :title, value: "#{@blog.title}", placeholder: "タイトルを入力してください", class: "new-title", maxlength: "200"
+        =link_to "Delete", "/blogs/#{@blog.id}", method: :delete, class: "delete-button"
+        =f.submit "Send", class: "send-button"
+      .content__text
+        =f.text_area :text, value: "#{@blog.text}", placeholder: "内容を入力してください", class: "new-text"

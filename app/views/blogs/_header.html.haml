@@ -1,0 +1,13 @@
+.header
+  .header__site-title m i n i b l o g
+  .header__btns
+    .header__btns__left-btn
+      - if user_signed_in?
+        =link_to '日記を書く', "/blogs/new", class: "header__btns__left-btn__text"
+      - else
+        =link_to 'ログイン', "/users/sign_in", class: "header__btns__left-btn__text"
+    .header__btns__right-btn
+      - if user_signed_in?
+        =link_to 'サインアウト', "/users/sign_out", method: :delete, class: "header__btns__right-btn__text"
+      - else
+        =link_to 'サインアップ', "/users/sign_up", class: "header__btns__right-btn__text"
